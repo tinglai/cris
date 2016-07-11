@@ -2,7 +2,7 @@ src = quack.cpp iduck.cpp cduck.cpp main.cpp
 obj = $(patsubst %.cpp,%.o,$(src))
 
 main : iduck.o cduck.o quack.o main.o
-	g++-4.8 -std=c++11 cduck.o quack.o main.o -o main
+	g++-4.8 -std=c++11 iduck.o cduck.o quack.o main.o -o main
 	@ echo "obj = $(obj)"
 
 quack.o : quack.cpp
